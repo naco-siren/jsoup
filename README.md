@@ -1,5 +1,3 @@
-
-
 # A modified jsoup to preserve the linebreaks when extracting text from an element
 
 ## English Introduction
