@@ -924,10 +924,11 @@ public class Element extends Node {
                     appendNormalisedText(accum, textNode);
                 } else if (node instanceof Element) {
                     Element element = (Element) node;
-                    if (accum.length() > 0 &&
-                        (element.isBlock() || element.tag.getName().equals("br")) &&
-                        !TextNode.lastCharIsWhitespace(accum))
-                        accum.append(" ");
+
+                    /* Overload */
+                    if (accum.length() > 0 && element.tag.getName().equals("br") &&
+                            (!TextNode.lastCharIsWhitespace(accum) || element.childNodes().size() == 0))
+                        accum.append("\n");
                 }
             }
 

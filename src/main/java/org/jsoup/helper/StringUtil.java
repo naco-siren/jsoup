@@ -130,6 +130,19 @@ public final class StringUtil {
 
         int len = string.length();
         int c;
+
+        /* Pass the abominable mere " " element or node  */
+        if(len == 1){
+            c = string.codePointAt(0);
+            if (isWhitespace(c)) {
+                return;
+            }
+            else {
+                accum.appendCodePoint(c);
+            }
+            return;
+        }
+
         for (int i = 0; i < len; i+= Character.charCount(c)) {
             c = string.codePointAt(i);
             if (isWhitespace(c)) {
