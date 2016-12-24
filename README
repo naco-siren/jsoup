@@ -1,3 +1,20 @@
+
+
+# A modified jsoup to preserve the linebreaks when extracting text from an element
+
+## English Introduction
+While the original version ruins the paragraphical structure of a website because all the whitespaces including linebreaks are ommited, this version is highly convenient in parsing webpages for Android applications.
+
+The implementation of **Element.text()** and **StringUtil.appendNormalisedWhitespace()** is changed.
+
+## 中文简介
+原版**jsoup**的**Element**对象在调用**text()**方法来返回一个字符串时，所有换行符都会丢失，因而破坏了网页中文本原有的段落结构。
+
+因此，在这个分支中我重写了如上所示的两个类的方法，非常适合用于在安卓应用中解析网页的文本。
+
+
+
+## Original Readme
 jsoup: Java HTML parser that makes sense of real-world HTML soup.
 
 jsoup is a Java library for working with real-world HTML. It provides a very convenient API for extracting and manipulating data, using the best of DOM, CSS, and jquery-like methods.
@@ -15,3 +32,5 @@ jsoup is designed to deal with all varieties of HTML found in the wild; from pri
 jsoup runs on Java 1.5 and up.
 
 See https://jsoup.org/ for downloads and documentation.
+
+
