@@ -926,7 +926,7 @@ public class Element extends Node {
                     Element element = (Element) node;
 
                     /* Overload */
-                    if (accum.length() > 0 && element.tag.getName().equals("br") &&
+                    if (accum.length() > 0 && (element.tag.getName().equals("br") || element.tag.getName().equals("p")) &&
                             (!TextNode.lastCharIsWhitespace(accum) || element.childNodes().size() == 0))
                         accum.append("\n");
                 }

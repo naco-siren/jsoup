@@ -17,6 +17,11 @@ import java.net.URL;
 
  @author Jonathan Hedley */
 public class Jsoup {
+
+    public static void main(String[] args) {
+
+    }
+
     private Jsoup() {}
 
     /**
